@@ -1,6 +1,6 @@
 function Header({ name }) {
   return (
-    <div style={{ textAlign: 'center', }}>hello {name}</div>
+    <div className="text-center">hello {name}</div>
   );
 }
 

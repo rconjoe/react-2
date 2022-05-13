@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div style={{ backgroundColor: 'gray', height: '100vh' }}>
+    <div className='bg-slate-200 h-screen'>
       <Header name={'joe'} />
       <Main />
       <Footer />

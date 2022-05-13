@@ -1,24 +1,30 @@
+import { useState } from 'react';
+
 function Main() {
 
-  let names = ['joe', 'ben', 'alex'];
+  const [names, setNames] = useState(['joe', 'ben', 'alex']);
+  const [inputText, setInputText] = useState('');
 
-  function changeName() {
-    return names[0] = 'bob';
-  }
+  function handleTextInput(e) {
+    setInputText(e.target.value);
+  };
 
-  return (
+  function addName() {
+    setNames(names => [...names, inputText]);
+    setInputText('');
+  };
+
+  return (<>
     <div>
-      <div>a bunch of</div>
-      <div>unrelated content</div>
       {
         names.map((name) => {
-          return <div>{name}</div>
+          return <div key={name}>{name}</div>
         })
       }
-      <button click={changeName}>click me</button>
+      <input type="text" value={inputText} onChange={handleTextInput} />
+      <button onClick={addName}>Add Name</button>
     </div>
-  );
-
+  </>);
 }
 
 export default Main;
