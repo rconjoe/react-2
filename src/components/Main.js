@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Main() {
 
@@ -8,6 +9,17 @@ function Main() {
   function handleTextInput(e) {
     setInputText(e.target.value);
   };
+
+  useEffect(() => {
+    async function fetchUsers() {
+      const response = await axios.get('http://localhost:8000/users');
+      console.log(response)
+      return response
+    }
+    fetchUsers();
+  }, [])
+
+
 
   function addName() {
     setNames(names => [...names, inputText]);
