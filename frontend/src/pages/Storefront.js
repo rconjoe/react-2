@@ -3,8 +3,9 @@ import Footer from '../components/Footer';
 
 function Storefront() {
   return (<>
-    <Header name={'joe'} />
-    <h1>THIS IS A STOREFRONT!</h1>
+    <Header />
+    <div className="grid grid-rows-4 gap-4 justify-center bg-gray-700 mx-12 my-6 p-6 rounded-lg shadow-lg">
+    </div>
     <Footer />
   </>)
 };
