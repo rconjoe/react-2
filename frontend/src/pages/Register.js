@@ -6,6 +6,7 @@ import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [regError, setRegError] = useState('');
@@ -28,9 +29,16 @@ export default function Register() {
         navigate('/');
       })
       .catch(error => {
-        setRegError(error.message)
+        setRegError(error.message);
+        clearRegError();
       })
   };
+
+  function clearRegError() {
+    setTimeout(() => {
+      setRegError('');
+    }, 5000);
+  }
 
   return (<>
     <Header />
