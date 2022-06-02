@@ -16,7 +16,15 @@ exports.onUserCreate = functions.auth.user().onCreate((user) => {
   db.collection('users').doc(user.uid).set({
     email: user.email,
     uid: user.uid,
-    username: ''
+    username: 'Username',
+    bio: '',
+    stats: {
+      totalSales: 0,
+      monthToDate: 0,
+      lastSale: '',
+      topSeller: '',
+    },
+    profilePhoto: 'https://st.depositphotos.com/2101611/3925/v/600/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg',
   })
   .catch(error => {
     console.error(error)

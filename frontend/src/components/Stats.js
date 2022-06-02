@@ -17,7 +17,7 @@ export default function Stats({ user }) {
       </div>
       <div className='flex flex-row gap-4'>
         <p className='text-slate-300'>Most Recent:</p>
-        <p className='text-slate-200 text-bold'>{Date(stats.lastSale.seconds * 1000)}</p>
+        <p className='text-slate-200 text-bold'>{stats.lastSale}</p>
       </div>
       <div className='flex flex-row gap-4'>
         <p className='text-slate-300'>Top Seller:</p>
