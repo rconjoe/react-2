@@ -3,8 +3,8 @@ export default function Stats({ user }) {
   const { stats } = user;
 
   return (<>
-    <div className="flex flex-col gap-6 m-6 place-items-center bg-gray-700 rounded-lg">
-      <p className='text-xl text-center'>
+    <div className="flex flex-col gap-6 mx-24 place-items-center bg-gray-700 rounded-lg">
+      <p className='text-2xl text-center'>
         Stats
       </p>
       <div className='flex flex-row gap-4'>

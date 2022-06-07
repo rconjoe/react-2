@@ -100,7 +100,7 @@ export default function EditProfile({ user }) {
   }
 
   return (<>
-    <div className="flex flex-col gap-6 m-6 place-items-center bg-gray-700 rounded-lg">
+    <div className="flex flex-col gap-6 mx-6 place-items-center bg-gray-700 rounded-lg overflow-visible flex-wrap">
       <p className='text-2xl text-center'>
         Profile
       </p>

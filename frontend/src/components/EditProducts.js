@@ -7,7 +7,7 @@ export default function EditProducts({ user, products }) {
 
   return (<>
 
-    <div className="flex flex-col max-h-[40rem] overflow-y-scroll gap-6 m-6 place-items-center bg-gray-700 rounded-lg">
+    <div className="flex flex-col max-h-[40rem] gap-6 mx-6 place-items-center bg-gray-700 rounded-lg">
       <p className='text-2xl text-center'>
         Products
       </p>
