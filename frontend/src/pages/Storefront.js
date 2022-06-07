@@ -1,11 +1,26 @@
+import { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Product from '../components/Product';
+import { useParams } from 'react-router-dom';
+import fetchProfileByUsername from '../util/fetchProfileByUsername';
 
 function Storefront() {
+
+  const { username } = useParams();
+
+  useEffect(() => {
+    async function fetchProfile() {
+      const profile = await fetchProfileByUsername(username);
+      console.log(profile)
+    }
+
+    fetchProfile();
+  }, [])
+
   return (<>
     <Header />
-    <div className="grid grid-rows-4 gap-4 justify-center bg-gray-700 mx-12 my-6 p-6 rounded-lg shadow-lg">
-    </div>
+
     <Footer />
   </>)
 };

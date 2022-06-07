@@ -48,7 +48,7 @@ function App({ user }) {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={userState ? <Home user={userState} products={products} /> : <Login />} />
-          <Route path='/storefront/:id' element={<Storefront />} />
+          <Route path='/storefront/:username' element={<Storefront />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
         </Routes>
