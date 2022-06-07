@@ -4,12 +4,14 @@ import EditProfile from '../components/EditProfile';
 import EditProducts from '../components/EditProducts';
 import Stats from '../components/Stats';
 
+import './Home.style.css';
+
 function Home({ user, products }) {
 
   return (<>
     <Header user={user} />
     <div className="bg-gray-700 mx-6 my-2 p-6 rounded-lg shadow-lg">
-      <div className='p-6 grid grid-cols-1 grid-rows-3 gap-4 lg:grid-cols-3 lg:grid-rows-1 text-center text-xl'>
+      <div className='p-6 flex flex-col md:flex-row gap-8 text-center text-xl overflow-auto scrollbar'>
         <div className='bg-gray-700'>
           <EditProfile user={user} />
         </div>
