@@ -5,12 +5,10 @@ import { getFirestore, doc, query, collection, where, updateDoc, deleteDoc, getD
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { CheckIcon } from '@heroicons/react/outline';
 
-export default function Product({ user, product }) {
+export default function Product({ user, product, canEditProduct }) {
 
   const db = getFirestore(app);
   const storage = getStorage(app);
-
-  const canEditProduct = true;
 
   const [mode, setMode] = useState(false);
   const [titleEdit, setTitleEdit] = useState('');

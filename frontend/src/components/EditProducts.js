@@ -13,7 +13,7 @@ export default function EditProducts({ user, products }) {
       </p>
       <div className='flex flex-col gap-4'>
         {products.map((product) => {
-          return <Product user={user} product={product} key={product.title} />
+          return <Product user={user} product={product} key={product.title} canEditProduct />
         })}
         <AddProduct user={user} />
       </div>
